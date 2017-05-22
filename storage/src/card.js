@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 
-
+import {  MarkdownPreview  } from 'react-marked-markdown';
 
 
 
@@ -13,9 +13,12 @@ export default class Card extends Component{
     var style={
       backgroundColor:this.props.color
     }
+    
+   
      return <div className="card" style={style}>
         <span onClick={this.deletecard.bind(this)}>xXXXXXX</span>
-        {this.props.text}
+      {this.props.text}
+
      </div>
    }
 }

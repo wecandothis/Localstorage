@@ -19,16 +19,17 @@ componentDidMount(){
      if(data){
         this.setState({cards:data})
      }
-     console.log(this.state.cards)
+     
 }
 //组件更新后，返回更新后的本地数据
-componentDidUpdata(){
+componentDidUpdate(){
   var stordata=JSON.stringify(this.state.cards);
   localStorage.setItem('stordata',stordata)
+  console.log("123")
+
 }
 ondelete(v){
     var newcards=this.state.cards.filter((_v)=>_v.id!=v.id);
-    console.log(newcards)
     this.setState({cards:newcards})
 
 }

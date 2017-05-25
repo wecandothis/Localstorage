@@ -51,7 +51,7 @@ componentDidUpdate(){
 
 }
 ondelete(v){
-    var newcards=this.state.cards.filter((_v)=>_v.id!=v.id);
+    var newcards=this.state.cards.filter((_v)=>_v.id!==v.id);
     this.setState({cards:newcards})
 
 }
@@ -90,7 +90,7 @@ changeeditor(e){
          <li>{hellodata.greeting}</li>
          <li>{hellodata.first}</li>
          <li>{hellodata.second}</li>
-         <img src={close} onClick={this.exchanganimation.bind(this)} />
+         <img src={close} onClick={this.exchanganimation.bind(this)} alt='' />
        </ul>
        
     </div>
